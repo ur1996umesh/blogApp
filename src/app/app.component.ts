@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements Oninit s{
+export class AppComponent implements Oninit{
   title = 'blogApp';
   ngOnInit(){
     return;
