@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Oninit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent implements Oninit{
   title = 'blogApp';
   ngOnInit(){
+  console.log('yes');
     return;
   }
 }
