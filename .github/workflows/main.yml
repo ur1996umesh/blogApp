@@ -15,13 +15,14 @@ jobs:
         with:
           nodeversion: 16.x
       - name: check github prop
-        run: echo '${{ github.ref }}'
-        run: echo '${{ github.event_name }}'
-        run: echo '${{ github.job }}'
-        run: echo '${{ github.event }}'
-        run: echo '${{ github.server_url }}'
-        run: echo '${{ github.api_url }}'
-        run: echo '${{ github.ref_name }}'
+        run: |
+          echo '${{ github.ref }}'
+          echo '${{ github.event_name }}'
+          echo '${{ github.job }}'
+          echo '${{ github.event }}'
+          echo '${{ github.server_url }}'
+          echo '${{ github.api_url }}'
+          echo '${{ github.ref_name }}'
         
       - name: check job prop
         run: echo '${{ toJSON(job)}}'
