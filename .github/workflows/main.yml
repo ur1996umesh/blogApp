@@ -3,7 +3,7 @@ name: learing
 on:
   push:
     branches:
-      -add-component
+      - main
 
 jobs:
   basicrun:
@@ -15,7 +15,7 @@ jobs:
         with:
           nodeversion: 16.x
       - run: npm ci
-      - run: echo "Hello World"
+      - run: echo Hello World
 
 
 
