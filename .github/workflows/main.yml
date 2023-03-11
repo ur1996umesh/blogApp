@@ -14,6 +14,11 @@ jobs:
         uses: actions/setup-node@v2
         with:
           nodeversion: 16.x
+      - name: check github prop
+        Id: prop
+        run: echo '${{ toJSON(github) }}'
+      - name: check job prop
+        run: echo '${{ toJSON(job)}}'
       - run: npm ci
       - run: echo Hello World
 
