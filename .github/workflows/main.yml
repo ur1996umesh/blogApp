@@ -15,7 +15,6 @@ jobs:
         with:
           nodeversion: 16.x
       - name: check github prop
-        Id: prop
         run: echo '${{ toJSON(github) }}'
       - name: check job prop
         run: echo '${{ toJSON(job)}}'
