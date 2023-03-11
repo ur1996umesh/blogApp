@@ -9,13 +9,13 @@ jobs:
   basicrun:
     runs-on: windows-latest
     steps:
-      -uses: actions/checkout@v3
-      -name: setup
-       uses: actions/setup-node@v2
-       with:
-         nodeversion: 16.x
-       run: npm ci
-       run: echo Hello World
+      - uses: actions/checkout@v3
+      - name: setup
+        uses: actions/setup-node@v2
+        with:
+          nodeversion: 16.x
+      - run: npm ci
+      - run: echo "Hello World"
 
 
 
