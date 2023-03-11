@@ -15,7 +15,15 @@ jobs:
         with:
           nodeversion: 16.x
       - name: check github prop
-        run: echo '${{ toJSON(github) }}'
+        run: |
+          echo '${{ github.ref }}'
+          echo '${{ github.event_name }}'
+          echo '${{ github.job }}'
+          echo '${{ github.event }}'
+          echo '${{ github.server_url }}'
+          echo '${{ github.api_url }}'
+          echo '${{ github.ref_name }}'
+        
       - name: check job prop
         run: echo '${{ toJSON(job)}}'
       - run: npm ci
