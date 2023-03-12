@@ -26,8 +26,22 @@ jobs:
         
       - name: check job prop
         run: echo '${{ toJSON(job)}}'
+      
       - run: npm ci
-      - run: echo Hello World
+
+      - name: build
+        id: ngbuild
+        run: npm run build
+
+      - name: status
+        needs: ngbuild
+        if: steps.ngbuild.conclusion == 'success'
+        run: echo Build is successed
+
+      - name: status
+        needs: ngbuild
+        if: steps.ngbuild.conclusion != 'success'
+        run: echo Build is failed
 
 
 
